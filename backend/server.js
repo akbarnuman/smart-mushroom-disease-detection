@@ -14,6 +14,9 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
 app.use('/api', routes);
+app.get("/", (req, res) => {
+  res.send("Backend is LIVE 🚀");
+});
 
 // Database Connection
 mongoose.connect(process.env.MONGO_URI)
