@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4f46e5;
+  --primary-soft: rgba(79, 70, 229, 0.1);
+  --success-soft: rgba(16, 185, 129, 0.1);
+  --warning-soft: rgba(245, 158, 11, 0.1);
+  --info-soft: rgba(6, 182, 212, 0.1);
+  --bg-dark: #111827;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+}
+
+.bg-gradient-primary-dark {
+  background: linear-gradient(135deg, #4f46e5 0%, #1e1b4b 100%);
+}
+
+.icon-box {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  border-color: #4338ca;
+}
+
+.sidebar-container {
+  min-height: calc(100vh - 56px);
+  position: sticky;
+  top: 56px;
+}
+
+.hover-bg-light-opacity:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white !important;
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+.feature-card {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  height: 14px;
+  margin-bottom: 8px;
+  width: 80%;
+}
+
+.skeleton-title {
+  height: 22px;
+  margin-bottom: 12px;
+  width: 50%;
+}
+
+.skeleton-card {
+  height: 120px;
+  border-radius: 16px;
+}
+
+.skeleton-chart {
+  height: 300px;
+  border-radius: 16px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Toast Slide In */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Drag Active State */
+.upload-zone.drag-active {
+  background: rgba(79, 70, 229, 0.08) !important;
+  border-color: #4f46e5 !important;
+  transform: scale(1.02);
+}

@@ -1,0 +1,33 @@
+SMDD Model Evaluation Report
+============================================================
+
+Model: C:\Users\hp\Desktop\SMDD\ml-api\model.h5
+Dataset: C:\Users\hp\Desktop\SMDD\ml-api\..\data\dataset
+Validation Images: 165
+Classes: ['Black_Mold', 'Green_Mold', 'Healthy', 'Mixed_Infected', 'Single_Infected']
+
+Overall Accuracy: 0.4242 (42.4%)
+
+Classification Report:
+                 precision    recall  f1-score   support
+
+     Black_Mold     0.0000    0.0000    0.0000         2
+     Green_Mold     0.3333    0.8333    0.4762        12
+        Healthy     0.4758    1.0000    0.6448        59
+ Mixed_Infected     1.0000    0.0159    0.0312        63
+Single_Infected     0.0000    0.0000    0.0000        29
+
+       accuracy                         0.4242       165
+      macro avg     0.3618    0.3698    0.2304       165
+   weighted avg     0.5762    0.4242    0.2771       165
+
+
+Confusion Matrix:
+[[ 0  2  0  0  0]
+ [ 0 10  2  0  0]
+ [ 0  0 59  0  0]
+ [ 0  1 61  1  0]
+ [10 17  2  0  0]]
+
+Rows = Actual class, Columns = Predicted class
+Diagonal values = Correct predictions

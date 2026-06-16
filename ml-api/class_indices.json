@@ -1,0 +1,7 @@
+{
+  "Black_Mold": 0,
+  "Green_Mold": 1,
+  "Healthy": 2,
+  "Mixed_Infected": 3,
+  "Single_Infected": 4
+}

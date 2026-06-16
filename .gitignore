@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# Python / ML API
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+ml-api/checkpoints/
+*.log
+
+# Large Datasets
+data/
+dataset/
+
+# Build / System
+.DS_Store
+dist/
+build/
