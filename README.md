@@ -5,7 +5,7 @@ SMDD is a full-stack AI-powered web application designed to detect diseases in m
 
 ## 🌐 Live Demo
 
-Frontend: smart-mushroom-disease-detection.vercel.app
+Frontend: https://smart-mushroom-disease-detection.vercel.app
 
 Backend API: https://smart-mushroom-disease-detection.onrender.com
 
