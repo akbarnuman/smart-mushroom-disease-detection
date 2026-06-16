@@ -24,7 +24,7 @@ const Profile = () => {
 
     const fetchStats = async () => {
         try {
-            const res = await axios.get('http://localhost:5050/api/analytics');
+            const res = await axios.get('https://smart-mushroom-disease-detection.onrender.com/api/analytics');
             setStats(res.data.stats);
         } catch (err) {
             console.error('Failed to fetch stats');
@@ -53,7 +53,7 @@ const Profile = () => {
 
         setPasswordLoading(true);
         try {
-            await axios.put('http://localhost:5050/api/auth/change-password', {
+            await axios.put('https://smart-mushroom-disease-detection.onrender.com/api/auth/change-password', {
                 currentPassword: passwordForm.currentPassword,
                 newPassword: passwordForm.newPassword,
             });

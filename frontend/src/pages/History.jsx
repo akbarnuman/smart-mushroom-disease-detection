@@ -20,7 +20,7 @@ const History = () => {
 
     const fetchHistory = async () => {
         try {
-            const res = await axios.get('http://localhost:5050/api/history');
+            const res = await axios.get('https://smart-mushroom-disease-detection.onrender.com/api/history');
             setHistory(res.data);
         } catch (err) {
             console.error('Failed to fetch history');
@@ -33,7 +33,7 @@ const History = () => {
         e.stopPropagation();
         if (!window.confirm('Are you sure you want to delete this record?')) return;
         try {
-            await axios.delete(`http://localhost:5050/api/history/${id}`);
+            await axios.delete(`https://smart-mushroom-disease-detection.onrender.com/api/history/${id}`);
             setHistory(history.filter(item => item._id !== id));
             if (selectedItem && selectedItem._id === id) setSelectedItem(null);
             addToast('Record deleted successfully.', 'success');
@@ -144,7 +144,7 @@ const History = () => {
                                     >
                                         <td className="px-4 py-3">
                                             <img
-                                                src={`http://localhost:5050${item.imageUrl}`}
+                                                src={`https://smart-mushroom-disease-detection.onrender.com${item.imageUrl}`}
                                                 alt="Mushroom"
                                                 className="rounded shadow-sm"
                                                 style={{ width: '60px', height: '60px', objectFit: 'cover' }}
@@ -194,7 +194,7 @@ const History = () => {
                             {/* Image + Quick Info */}
                             <div style={{ display: 'flex', gap: 20, marginBottom: 24, flexWrap: 'wrap' }}>
                                 <img
-                                    src={`http://localhost:5050${selectedItem.imageUrl}`}
+                                    src={`https://smart-mushroom-disease-detection.onrender.com${selectedItem.imageUrl}`}
                                     alt="Mushroom"
                                     style={{ width: 180, height: 180, objectFit: 'cover', borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
                                 />

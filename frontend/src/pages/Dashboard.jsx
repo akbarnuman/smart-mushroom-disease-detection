@@ -79,7 +79,7 @@ const Dashboard = () => {
         formData.append('file', file);
 
         try {
-            const res = await axios.post('http://localhost:5050/api/predict', formData);
+            const res = await axios.post('https://smart-mushroom-disease-detection.onrender.com/api/predict', formData);
             setResult(res.data);
             addToast(`Analysis complete: ${res.data.diseaseName.replace('_', ' ')}`, 'success');
         } catch (err) {

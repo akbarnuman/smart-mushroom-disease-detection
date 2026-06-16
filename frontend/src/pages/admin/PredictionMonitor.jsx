@@ -15,7 +15,7 @@ const PredictionMonitor = () => {
 
     const fetchPredictions = async () => {
         try {
-            const res = await axios.get('http://localhost:5050/api/admin/predictions');
+            const res = await axios.get('https://smart-mushroom-disease-detection.onrender.com/api/admin/predictions');
             setPredictions(res.data);
         } catch (err) {
             addToast('Failed to fetch predictions', 'error');
@@ -28,7 +28,7 @@ const PredictionMonitor = () => {
         if (e) e.stopPropagation();
         if (!window.confirm('Delete this prediction?')) return;
         try {
-            await axios.delete(`http://localhost:5050/api/admin/predictions/${id}`);
+            await axios.delete(`https://smart-mushroom-disease-detection.onrender.com/api/admin/predictions/${id}`);
             setPredictions(predictions.filter(p => p._id !== id));
             if (selected?._id === id) setSelected(null);
             addToast('Prediction deleted.', 'success');
@@ -105,7 +105,7 @@ const PredictionMonitor = () => {
                             ) : filtered.map(p => (
                                 <tr key={p._id} onClick={() => setSelected(p)} style={{ cursor: 'pointer' }}>
                                     <td className="px-4 py-3">
-                                        <img src={`http://localhost:5050${p.imageUrl}`} alt="Mushroom"
+                                        <img src={`https://smart-mushroom-disease-detection.onrender.com${p.imageUrl}`} alt="Mushroom"
                                             className="rounded shadow-sm" style={{ width: 50, height: 50, objectFit: 'cover' }} />
                                     </td>
                                     <td className="py-3">
@@ -148,7 +148,7 @@ const PredictionMonitor = () => {
                         </div>
                         <div style={{ padding: 24 }}>
                             <div className="d-flex gap-3 mb-3 flex-wrap">
-                                <img src={`http://localhost:5050${selected.imageUrl}`} alt="" style={{ width: 140, height: 140, objectFit: 'cover', borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} />
+                                <img src={`https://smart-mushroom-disease-detection.onrender.com${selected.imageUrl}`} alt="" style={{ width: 140, height: 140, objectFit: 'cover', borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} />
                                 <div>
                                     <div style={{ fontSize: 20, fontWeight: 700 }}>{selected.diseaseName.replace('_', ' ')}</div>
                                     <div className="text-muted small mb-2">by {selected.userId?.name || 'Unknown'} • {new Date(selected.createdAt).toLocaleString()}</div>

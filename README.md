@@ -35,7 +35,7 @@ npm install
 # Update MONGO_URI and JWT_SECRET
 npm start
 ```
-*The Backend runs on `http://localhost:5050`*
+*The Backend runs on `https://smart-mushroom-disease-detection.onrender.com`*
 
 ### 3. Frontend (React + Vite)
 The dashboard and user interface.

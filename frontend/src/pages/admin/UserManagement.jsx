@@ -13,7 +13,7 @@ const UserManagement = () => {
 
     const fetchUsers = async () => {
         try {
-            const res = await axios.get('http://localhost:5050/api/admin/users');
+            const res = await axios.get('https://smart-mushroom-disease-detection.onrender.com/api/admin/users');
             setUsers(res.data);
         } catch (err) {
             addToast('Failed to fetch users', 'error');
@@ -25,7 +25,7 @@ const UserManagement = () => {
     const handleDelete = async (id, name) => {
         if (!window.confirm(`Delete user "${name}" and ALL their predictions? This cannot be undone.`)) return;
         try {
-            await axios.delete(`http://localhost:5050/api/admin/users/${id}`);
+            await axios.delete(`https://smart-mushroom-disease-detection.onrender.com/api/admin/users/${id}`);
             setUsers(users.filter(u => u._id !== id));
             addToast(`User "${name}" deleted successfully.`, 'success');
         } catch (err) {
@@ -35,7 +35,7 @@ const UserManagement = () => {
 
     const handleRoleChange = async (id, newRole) => {
         try {
-            await axios.patch(`http://localhost:5050/api/admin/users/${id}/role`, { role: newRole });
+            await axios.patch(`https://smart-mushroom-disease-detection.onrender.com/api/admin/users/${id}/role`, { role: newRole });
             setUsers(users.map(u => u._id === id ? { ...u, role: newRole } : u));
             addToast(`Role updated to "${newRole}".`, 'success');
         } catch (err) {

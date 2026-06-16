@@ -33,7 +33,7 @@ const Analytics = () => {
 
     const fetchAnalytics = async () => {
         try {
-            const res = await axios.get('http://localhost:5050/api/analytics');
+            const res = await axios.get('https://smart-mushroom-disease-detection.onrender.com/api/analytics');
             setAnalytics(res.data);
         } catch (err) {
             console.error('Failed to fetch analytics');
