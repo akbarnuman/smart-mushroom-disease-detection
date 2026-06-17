@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Smart Mushroom Disease Detection (SMDD)
 
 SMDD is a full-stack AI-powered web application designed to detect diseases in mushrooms using deep learning (MobileNetV2). It provides real-time analysis, treatment recommendations, and a historical tracking dashboard.
@@ -43,7 +42,7 @@ npm install
 # Update MONGO_URI and JWT_SECRET
 npm start
 ```
-*The Backend runs on `https://http://127.0.0.1:5000`*
+*The Backend runs on `http://localhost:5050`*
 
 ### 3. Frontend (React + Vite)
 The dashboard and user interface.
@@ -74,4 +73,4 @@ npm run dev
 - `backend/`: Express server, controllers, and database models.
 - `frontend/`: React source code and UI components.
 - `data/`: Placeholder for your mushroom disease dataset.
-=======
+
